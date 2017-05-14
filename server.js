@@ -12,7 +12,7 @@ var io = require('socket.io')(chatserver);
 var online_user_num = 0;
 
 io.use(function(socket, next){
-  console.log(socket.request);
+  console.log(socket.request.headers.cookie.permitted);
   next();
 });
 

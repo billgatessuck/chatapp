@@ -93,4 +93,5 @@ app.get('/logout', function(req, res){
   res.redirect('/');
 })
 
+exports.sessionvar = session;
 exports.fileServer = server;

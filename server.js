@@ -10,10 +10,11 @@ var io = require('socket.io')(chatserver);
 
 
 var online_user_num = 0;
-
 io.use(function(socket, next){
   var c = cookie.parse(socket.request.headers.cookie);
-  console.log(c.permitted);
+  c = c.permitted;
+  c = c.split('.').map(function(val){return val;});
+  console.log(c);
   next();
 });
 

@@ -1,0 +1,140 @@
+  *{
+    box-sizing: border-box;
+  }
+  body{
+    width: 100%;
+  }
+
+  .container{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  #chatForm{
+    margin-top: 1%;
+  }
+  #chatInput{
+    transition-property: all;
+    transition-duration: .5s;
+    width: 90%;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    border-color: rgb(40, 170, 220);
+  }
+  #chatInput:focus{
+    box-shadow: 1px 1px 2px rgb(40, 170, 220);
+  }
+  #send{
+    float: right;
+    width: 9%;
+    height: 42px;
+  }
+  .button{
+    color: white;
+    background: rgb(40, 170, 240);
+    border-radius: 10px;
+    border-color: white;
+    border-style: solid;
+    box-shadow: 0px 0px 0px white;
+  }
+  .curr_stat{
+    margin-top: 48px;
+    text-align: center;
+  }
+
+  #active_num{
+    background: #666;
+    margin: 0px;
+    color: white;
+    font-family: sans-serif;
+    padding: 1%;
+
+  }
+  #chatBody{
+    font-family: sans-serif;
+    padding-left: 1%;
+    padding-right: 1%;
+    background: #eee;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-bottom: 20px solid #eee;
+    word-break: break-all;
+  }
+  #chatBody > div{
+    display: block;
+    font-size: 16px;
+    margin: 3px;
+    border-radius: 15px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    clear: both;
+  }
+  #chatBody > div.left{
+    color: white;
+    text-align: left;
+    background: #82CAFF;
+    float: left;
+    clear: both;
+  }
+  #chatBody > div.right{
+    color: white;
+    background: #54C571;
+    float: right;
+    text-align: right;
+    clear: both;
+  }
+  #chatBody > div > span{
+    text-align: right;
+    float: right;
+    font-style: italic;
+    margin-top: 4px;
+    font-size: 12px;
+  }
+
+  nav{
+    box-shadow: 1px 1px 10px black;
+    position: fixed;
+    top: 0;
+    padding: 10px 20px 10px 20px;
+    margin: 0px 0px 10px 0px;
+    background: #345;
+    font-family: sans-serif;
+    width: 100%;
+  }
+  #banner{
+    margin: 0px;
+    display: inline-block;
+    width: 30%;
+  }
+  #banner a{
+    color: wheat;
+    text-decoration: none;
+  }
+  #banner a h1{
+    margin: 0px;
+  }
+  #submenu{
+    text-align: right;  
+    display: inline-block;
+    width: 69%;
+  }
+  #submenu a{
+    text-decoration: none;
+    color: white;
+  }
+  @media screen and (max-width: 768px) {
+    .container{
+      margin-left: 0%;
+      margin-right: 0%;
+    }
+    #chatInput{
+      width: 70%;
+    }
+    #send{
+      width: 28%;
+    }
+  }

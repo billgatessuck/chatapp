@@ -1,0 +1,31 @@
+{
+  "name": "chatapp",
+  "version": "1.0.0",
+  "description": "A chat app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/common": "^4.1.2",
+    "@angular/compiler": "^4.1.2",
+    "@angular/core": "^4.1.2",
+    "@angular/forms": "^4.1.2",
+    "@angular/http": "^4.1.2",
+    "@angular/platform-browser": "^4.1.2",
+    "@angular/platform-browser-dynamic": "^4.1.2",
+    "@angular/router": "^4.1.2",
+    "body-parser": "^1.17.1",
+    "client-sessions": "^0.8.0",
+    "compression": "^1.6.2",
+    "core-js": "^2.4.1",
+    "express": "^4.15.2",
+    "mongodb": "^2.2.26",
+    "rxjs": "^5.4.0",
+    "socket.io": "^1.7.3",
+    "systemjs": "^0.20.12",
+    "zone.js": "^0.8.10"
+  }
+}

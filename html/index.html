@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>A Chat application</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="/css/style.css">
+
+  </head>
+  <body style="margin:0px">
+
+    <nav>
+      <div id="banner">
+        <a href="/"><h1>Kahe.ga</h1></a>
+      </div>
+      <div id="submenu">
+        <a href="/login">Login</a>
+        <a href="/logout">Logout</a>
+      </div>
+    </nav>
+
+
+    <div class="curr_stat container">
+      <p id="active_num"></p>
+    </div>
+    <div class="container" id="chatBody">
+      <h3 style="text-align: center"></h3>
+    </div>
+
+
+    <div id="chatForm" class="container">
+      <form onsubmit="return chatSend()">
+        <input type="text" id="chatInput" value="" autocomplete="off"/>
+        <button type="button" onclick="chatSend()" class="button" id="send">Send</button>
+      </form>
+    </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="js/themejs.js?a"></script>
+    <script src="js/socket.io.js"></script>
+    <script src="js/conaddr.js"></script>
+    <script src="js/conscript.js"></script>
+  </body>
+</html>

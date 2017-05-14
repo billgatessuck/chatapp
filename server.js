@@ -1,7 +1,7 @@
 
 
 var db = require(__dirname + '/mango.js').db;
-
+var cookie = require('cookie');
 require(__dirname + '/express.js');
 
 //Chat Server
@@ -12,7 +12,8 @@ var io = require('socket.io')(chatserver);
 var online_user_num = 0;
 
 io.use(function(socket, next){
-  console.log(socket.request.headers.cookie.permitted);
+  var c = cookie.parse(socket.request.headers.cookie);
+  console.log(c.permitted);
   next();
 });
 

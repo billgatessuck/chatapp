@@ -17,6 +17,7 @@
     "@angular/platform-browser": "^4.1.2",
     "@angular/platform-browser-dynamic": "^4.1.2",
     "@angular/router": "^4.1.2",
+    "base64url": "^2.0.0",
     "body-parser": "^1.17.1",
     "client-sessions": "^0.8.0",
     "compression": "^1.6.2",

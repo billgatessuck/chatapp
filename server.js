@@ -1,9 +1,8 @@
-
-
+var decrypt = require('client-sessions').util.decode;
 var db = require(__dirname + '/mango.js').db;
 var cookie = require('cookie');
 require(__dirname + '/express.js');
-
+var secretKey = require('./secret.js');
 //Chat Server
 var chatserver = require(__dirname + '/chatserver.js').chatServer;
 var io = require('socket.io')(chatserver);
@@ -13,8 +12,12 @@ var online_user_num = 0;
 io.use(function(socket, next){
   var c = cookie.parse(socket.request.headers.cookie);
   c = c.permitted;
-  c = c.split('.').map(function(val){return val;});
-  console.log(c);
+  var opts = {
+    cookieName : 'permitted',
+    secret : secretKey
+  };
+  var res = decrypt(opts, c);
+  console.log(res);
   next();
 });
 
